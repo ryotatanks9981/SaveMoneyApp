@@ -46,8 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.sound = UNNotificationSound.default
         
         var notificationTime = DateComponents()
-        notificationTime.hour = 13
-        notificationTime.minute = 11
+        notificationTime.hour = 20
+        notificationTime.minute = 00
         let trigger: UNNotificationTrigger
         trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
         

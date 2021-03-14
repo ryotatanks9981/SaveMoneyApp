@@ -19,8 +19,8 @@ class PageViewController: UIViewController {
         pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         pageVC.dataSource = self
         let homeVC = HomeViewController()
-        let graphVC = GraphViewController()
-        controllers = [homeVC, graphVC]
+
+        controllers = [homeVC,]
         pageVC.setViewControllers([controllers[0]], direction: .forward, animated: true)
         
         addChild(pageVC)

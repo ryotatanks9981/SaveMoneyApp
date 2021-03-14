@@ -7,25 +7,9 @@ class BalanceView: UIView {
         let button = UIButton()
         return button
     }()
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "総額"
-        label.font = .systemFont(ofSize: 30)
-        return label
-    }()
-    private let totalLabel: UILabel = {
-        let label = UILabel()
-        label.text = "0"
-        label.font = .systemFont(ofSize: 40)
-        label.textAlignment = .right
-        return label
-    }()
-    private let yenLabel: UILabel = {
-        let label = UILabel()
-        label.text = "円"
-        label.font = .systemFont(ofSize: 40)
-        return label
-    }()
+    private let titleLabel: UILabel = .generateLabel(title: "総額", fontSize: 30)
+    private let totalLabel: UILabel = .generateLabel(title: "0", fontSize: 40, alignment: .right)
+    private let yenLabel: UILabel = .generateLabel(title: "円", fontSize: 40)
     
     private var viewModel: BalanceViewPresen
     private var realmManager: RealmProtocol
@@ -39,18 +23,10 @@ class BalanceView: UIView {
         super.init(frame: .zero)
         
         setupViews()
-        binding()
+        reload()
     }
     
     func reload() {
-        viewModel.output.balanceValue
-            .drive(totalLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        totalLabel.layoutIfNeeded()
-    }
-    
-    private func binding() {
         viewModel.output.balanceValue
             .drive(totalLabel.rx.text)
             .disposed(by: disposeBag)

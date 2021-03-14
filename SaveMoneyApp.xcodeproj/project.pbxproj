@@ -18,7 +18,6 @@
 		5564762225F789B200E3D16E /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564762125F789B200E3D16E /* CustomError.swift */; };
 		5564762825F79ADE00E3D16E /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564762725F79ADE00E3D16E /* UIColor+.swift */; };
 		5564762C25F79B8000E3D16E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564762B25F79B8000E3D16E /* HomeViewController.swift */; };
-		5564762F25F79BA700E3D16E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564762E25F79BA700E3D16E /* GraphViewController.swift */; };
 		5564763325F79F0D00E3D16E /* launch-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5564763225F79F0D00E3D16E /* launch-animation.json */; };
 		5564763625F7A23500E3D16E /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564763525F7A23500E3D16E /* BalanceView.swift */; };
 		5564763C25F7A7CB00E3D16E /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564763B25F7A7CB00E3D16E /* FloatingButton.swift */; };
@@ -46,7 +45,6 @@
 		5564762125F789B200E3D16E /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		5564762725F79ADE00E3D16E /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		5564762B25F79B8000E3D16E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5564762E25F79BA700E3D16E /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		5564763225F79F0D00E3D16E /* launch-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "launch-animation.json"; sourceTree = SOURCE_ROOT; };
 		5564763525F7A23500E3D16E /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		5564763B25F7A7CB00E3D16E /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				5527BB3A25F91348002894DA /* Cell */,
 				556475ED25F784D000E3D16E /* PageViewController.swift */,
 				5564762B25F79B8000E3D16E /* HomeViewController.swift */,
-				5564762E25F79BA700E3D16E /* GraphViewController.swift */,
 				5564763F25F7AAAF00E3D16E /* AddLogViewController.swift */,
 				5564763825F7A23A00E3D16E /* CustomView */,
 			);
@@ -310,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				557C0A5025F9D6BD00EDFE34 /* LogsViewModel.swift in Sources */,
-				5564762F25F79BA700E3D16E /* GraphViewController.swift in Sources */,
 				5564763625F7A23500E3D16E /* BalanceView.swift in Sources */,
 				5564764C25F7CC5700E3D16E /* UIView+.swift in Sources */,
 				5564764F25F7CD9E00E3D16E /* TextField.swift in Sources */,

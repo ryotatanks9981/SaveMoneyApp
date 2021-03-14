@@ -44,29 +44,13 @@ class HomeViewController: UIViewController {
         viewModel.output.logs
             .drive(logView.rx.items(dataSource: self.dataSources))
             .disposed(by: disposeBag)
-        
-        floatingButton.rx.tap.subscribe(onNext: {
-            let content = UNMutableNotificationContent()
-            content.title = "お知らせ"
-            content.body = "tapped Button"
-            content.sound = UNNotificationSound.default
-            
-            var notificationTime = DateComponents()
-            notificationTime.hour = 13
-            notificationTime.minute = 11
-            let trigger: UNNotificationTrigger
-            trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
-            
-            let req = UNNotificationRequest(identifier: "immediately", content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+      
+        floatingButton.rx.tap.subscribe(onNext: { [weak self] in
+            let addLogVC = AddLogViewController()
+            let navVC = UINavigationController(rootViewController: addLogVC)
+            navVC.modalPresentationStyle = .fullScreen
+            self?.present(navVC, animated: true)
         }).disposed(by: disposeBag)
-        
-//        floatingButton.rx.tap.subscribe(onNext: { [weak self] in
-//            let addLogVC = AddLogViewController()
-//            let navVC = UINavigationController(rootViewController: addLogVC)
-//            navVC.modalPresentationStyle = .fullScreen
-//            self?.present(navVC, animated: true)
-//        }).disposed(by: disposeBag)
     }
     
     private func setupViews() {
